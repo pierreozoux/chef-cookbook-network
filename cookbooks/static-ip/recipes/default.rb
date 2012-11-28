@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-template "/etc/network/interface" do
+template "/etc/network/interfaces" do
   source "interface.erb"
   owner "root"
   group "root"
