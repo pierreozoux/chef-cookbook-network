@@ -48,8 +48,8 @@ if fqdn
     ruby_block 'put_fqdn_in_hosts' do
       block do
         hosts = Chef::Util::FileEdit.new("/etc/hosts")
-        if hosts.search_line(/^#{node[:ipaddress]}/)
-          hosts.search_file_replace_line(/^#{node[:ipaddress]}/, hosts_line)
+        if hosts.search_line("127.0.1.1")
+          hosts.search_file_replace_line("127.0.1.1", hosts_line)
         else
           hosts.append_line(hosts_line)
         end
