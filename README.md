@@ -5,6 +5,7 @@ A set of recipes to cook your network configuration before cooking your server.
 
 You'll need to add the following to your JSON attributes file :
 
+`````
 {
   ...
   "set_ip": "172.16.XXX.X"
@@ -19,3 +20,4 @@ You'll need to add the following to your JSON attributes file :
   ]
   ...
 }
+`````
