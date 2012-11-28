@@ -44,7 +44,7 @@ if fqdn
   end
 
   if node[:fqdn] != fqdn
-    hosts_line = "#{node[:ipaddress]} #{fqdn} #{hostname}"
+    hosts_line = "#{node[:set_ip]} #{fqdn} #{hostname}"
     ruby_block 'put_fqdn_in_hosts' do
       block do
         hosts = Chef::Util::FileEdit.new("/etc/hosts")
